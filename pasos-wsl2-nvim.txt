@@ -1,0 +1,36 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install neofetch
+sudo apt install neovim
+" sudo apt install python-neovim
+sudo apt install python3-neovim
+sudo apt install nodejs
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+git clone https://github.com/pxnditxyr/nvim.git ~/.config/nvim/
+"Go to path win32yank.exe
+cp win32yank.exe ~/.config/nvim/
+sudo ln -s ~/.config/nvim/win32yank.exe /usr/bin/win32yank
+nvim ~/.config/nvim/.vim/plugins.vim
+bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+~/.local/share/kite/login-user
+mkdir -p ~/.config/nvim/pack/kite/start/kite
+git clone https://github.com/kiteco/vim-plugin.git ~/.config/nvim/pack/kite/start/kite/
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+nvim ~/.zshrc " Change ZSH_THEME="powerlevel10k/powerlevel10k"
+
+sudo npm install --global yarn
+
+CocInstall coc-html coc-css coc-tsserver coc-ccls coc-json coc-java coc-omnisharp coc-kotlin
+
+cd ~/.config/coc/extensions/node_modules/coc-ccls
+ln -s node_modules/ws/lib lib
+
+sudo add-apt-repository universe
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+sudo python2 get-pip.py
+
+sudo apt install python3-pip
